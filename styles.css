@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: 
+    linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+    url("/practice/imagem/travel1.png") no-repeat center center;
+  background-size: cover;
+
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+#btn-surprise {
+  display: block;
+  margin: 0 auto 40px;
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #c1a0c5 0%, #1c0a47 100%);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(219, 197, 243, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+#btn-surprise:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(41, 1, 65, 0.6);
+}
+
+#btn-surprise:active {
+  transform: translateY(-1px);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card header h2 {
+  font-size: 1.5rem;
+  color: #667eea;
+  font-weight: 700;
+}
+
+#country-flag {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#country-flag:hover {
+  transform: scale(1.05);
+}
+
+.content {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.content p {
+  color: #555;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.content strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+#btn-clear {
+  display: block;
+  margin: 0 auto 40px;
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5e2fd4;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #6d0be4;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#btn-clear:hover {
+  background: #36045a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+#btn-clear:active {
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+  
+  #btn-surprise {
+    padding: 14px 40px;
+    font-size: 1rem;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card header h2 {
+    font-size: 1.3rem;
+  }
+}

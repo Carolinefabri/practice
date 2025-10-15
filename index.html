@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoFinder</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoFinder</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+  <h1>Welcome to Random Destination</h1>
+  <p>
+    Tap the button to instantly unveil your next surprise travel destination!
+  </p>
 
-    <h1>Welcome to Random Destination</h1>
+  <button id="btn-surprise">Are you Ready?</button>
+  
+
+  <div class="cards">
+    <article class="card">
+      <header>
+        <h2>Destination</h2>
+      </header>
+
+      <img id="country-flag" src="" alt="" />
+      <div id="country-info" class="content"></div>
+    </article>
+  </div>
+  <button id="btn-clear">Refresh</button>
 
 
-    <label for="name">Name (4 to 8 characters):</label>
 
-<input
-  type="text"
-  id="name"
-  name="name"
-  required
-  minlength="4"
-  maxlength="8"
-  size="10" />
+  <footer>
+    <p>&copy; 2025 Random Destination. All rights reserved. By Caroline Fabri</p>
+  </footer>
 
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+  <!-- Seu script JS separado -->
+  <script src="script.js"></script>
 </body>
 </html>
