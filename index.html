@@ -3,42 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InfoFinder</title>
-
-  <!-- CSS externo -->
+  <title>Random Destination</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✈️</text></svg>">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
+  <!-- Seletor de Idioma Moderno -->
+  <div class="language-selector-container">
+    <div class="language-selector" id="languageSelector">
+      <button class="language-btn" id="languageBtn">
+        <span class="language-icon" id="currentFlag">🇺🇸</span>
+        <span id="currentLang">English</span>
+        <div class="language-arrow"></div>
+      </button>
+      <div class="language-dropdown" id="languageDropdown">
+        <div class="language-option active" data-lang="en" data-flag="🇺🇸" data-name="English">
+          <span class="language-option-flag">🇺🇸</span>
+          <span>English</span>
+        </div>
+        <div class="language-option" data-lang="pt" data-flag="🇧🇷" data-name="Português">
+          <span class="language-option-flag">🇧🇷</span>
+          <span>Português</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <h1>Welcome to Random Destination</h1>
   <p>
     Tap the button to instantly unveil your next surprise travel destination!
   </p>
 
-  <button id="btn-surprise">Are you Ready?</button>
+  <button id="btn-surprise">Let's do it!</button>
   
-
   <div class="cards">
     <article class="card">
       <header>
         <h2>Destination</h2>
       </header>
-
       <img id="country-flag" src="" alt="" />
       <div id="country-info" class="content"></div>
     </article>
   </div>
+
   <button id="btn-clear">Refresh</button>
-
-
 
   <footer>
     <p>&copy; 2025 Random Destination. All rights reserved. By Caroline Fabri</p>
   </footer>
 
-
-
-  <!-- Seu script JS separado -->
   <script src="script.js"></script>
 </body>
 </html>
