@@ -7,8 +7,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: 
-    linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-    linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* aumentei de 0.1 para 0.5 */
+    url("/practice/imagem/cpy.jpg") no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   padding: 20px;
